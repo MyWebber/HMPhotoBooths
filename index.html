@@ -274,7 +274,7 @@ businessBtn.addEventListener('click', () => {
   const successMessage = document.getElementById('form-success');
 
   contactForm.addEventListener('submit', async function(event) {
-    event.preventDefault(); // Voorkomt standaard reload
+    event.preventDefault();
 
     const formData = new FormData(contactForm);
 
@@ -288,9 +288,10 @@ businessBtn.addEventListener('click', () => {
       });
 
       if (response.ok) {
-        contactForm.reset(); // Formulier leegmaken
-        contactForm.style.display = 'none'; // Formulier verbergen
-        successMessage.style.display = 'block'; // Bedankje tonen
+        contactForm.reset();
+        contactForm.style.display = 'none';
+        successMessage.style.display = 'block';
+        successMessage.classList.add('fade-in'); // 🌟 Fade-in class toevoegen
       } else {
         alert('Er ging iets mis. Probeer het later opnieuw.');
       }
@@ -299,6 +300,7 @@ businessBtn.addEventListener('click', () => {
     }
   });
 </script>
+
 
 
 
