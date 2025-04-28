@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruiloft Verhuur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <header>
+        <img src="ChatGPT Image 24 apr 2025, 14_41_52.png" alt="Royal Moments Logo" class="logo-img">
+        <div class="gold-line"></div>
+        <p class="slogan">Luxe verhuur voor onvergetelijke bruiloften – maak jouw dag betoverend met stijl en klasse.</p>
+      </header>
+
+
+
+      <section id="about-us" class="about-section">
+        <div class="about-content">
+          <h2>Wie zijn wij?</h2>
+          <p class="highlight">
+            Bij <strong>HM Booth Events</strong> draait alles om het creëren van onvergetelijke momenten.
+          </p>
+          <p>
+            Ons jonge en energieke team brengt plezier, professionaliteit en passie naar elk evenement. 
+            Wij zorgen dat jouw feest niet alleen goed verloopt, maar onvergetelijk wordt.
+          </p>
+          <p>
+            Met onze creatieve aanpak, persoonlijke service en unieke fotobooths tillen we elk event naar een hoger niveau.
+            Samen maken we herinneringen die blijven.
+          </p>
+        </div>
+      </section>
+      
+<script>
+  // GSAP Animatie
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".about-content", {
+  scrollTrigger: {
+    trigger: ".about-content",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  scale: 0.8,
+  opacity: 0,
+  duration: 1.5,
+  ease: "power4.out",
+});
+
+</script>
+
+
+<section id="video-booth" class="video-booth-section">
+  <div class="item">
+    <div class="item-info">
+      <h3 class="animate-fadein">360° Video Booth</h3>
+      <div class="gold-line left"></div>
+      <p class="animate-slideup">
+        Maak jouw bruiloft spectaculair met onze exclusieve 360° video booth. 
+        Gasten stappen op een elegant platform terwijl de camera hen omcirkelt voor een glamourvideo in slow-motion. 
+        Perfect voor social media, en een unieke herinnering die je keer op keer zult herbeleven.
+      </p>
+      <p class="highlight animate-slideup">
+        ✨ Onvergetelijke momenten. Professionele kwaliteit. Pure beleving.
+      </p>
+    </div>
+
+    <div class="item-video">
+      <video class="booth-video" autoplay muted loop playsinline>
+        <source src="booth video.mp4" type="video/mp4">
+        Jouw browser ondersteunt deze video niet.
+      </video>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  // GSAP Animaties
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".animate-fadein", {
+  scrollTrigger: {
+    trigger: ".animate-fadein",
+    start: "top 85%",
+    toggleActions: "play none none none"
+  },
+  opacity: 0,
+  y: -50,
+  duration: 1.2,
+  ease: "power3.out"
+});
+
+gsap.from(".animate-slideup", {
+  scrollTrigger: {
+    trigger: ".animate-slideup",
+    start: "top 90%",
+    toggleActions: "play none none none"
+  },
+  opacity: 0,
+  y: 50,
+  stagger: 0.3,
+  duration: 1.2,
+  ease: "power3.out"
+});
+
+</script>
+
+
+
+
+<section id="pricing" class="pricing-section">
+  <div class="pricing-header">
+    <h2>Onze Prijzen</h2>
+    <p>Kies het pakket dat het beste bij jouw evenement past.</p>
+    <div class="gold-line center"></div>
+
+    <!-- Toggle buttons -->
+    <div class="pricing-toggle">
+      <button id="privateBtn" class="toggle-btn active">Privé</button>
+      <button id="businessBtn" class="toggle-btn">Zakelijk</button>
+    </div>
+  </div>
+
+  <div class="pricing-cards">
+    <div class="card animate-fadein" data-private="€249" data-business="€299">
+      <h3>1 uur</h3>
+      <p class="price">€249</p>
+      <ul>
+        <li>360° Booth inclusief begeleiding</li>
+        <li>Directe social media delen</li>
+        <li>Glamour slow-motion video's</li>
+      </ul>
+    </div>
+
+    <div class="card animate-fadein" data-private="€399" data-business="€459">
+      <h3>2 uur</h3>
+      <p class="price">€399</p>
+      <ul>
+        <li>Alles van 1 uur</li>
+        <li>Meer opnames en extra tijd voor gasten</li>
+      </ul>
+    </div>
+
+    <div class="card animate-fadein" data-private="€699" data-business="€799">
+      <h3>4 uur</h3>
+      <p class="price">€699</p>
+      <ul>
+        <li>Alles van 2 uur</li>
+        <li>Inclusief extra props en accessoires</li>
+        <li>Volledige event-dekking</li>
+      </ul>
+    </div>
+
+    <div class="card animate-fadein highlight-card" data-private="Op aanvraag" data-business="Op aanvraag">
+      <h3>Meer dan 4 uur</h3>
+      <p class="price">Op aanvraag</p>
+      <ul>
+        <li>Op maat gemaakte pakketten</li>
+        <li>Speciale deals voor lange evenementen</li>
+        <li>Persoonlijk overleg & offerte</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<script>
+// GSAP Animaties
+gsap.registerPlugin(ScrollTrigger);
+
+// Titel en subtitel animaties
+gsap.from(".pricing-header h2", {
+  scrollTrigger: {
+    trigger: ".pricing-header",
+    start: "top 85%",
+    toggleActions: "play none none none",
+  },
+  opacity: 0,
+  y: -50,
+  duration: 1.2,
+  ease: "power3.out"
+});
+
+gsap.from(".pricing-header p", {
+  scrollTrigger: {
+    trigger: ".pricing-header",
+    start: "top 85%",
+    toggleActions: "play none none none",
+  },
+  opacity: 0,
+  y: -30,
+  duration: 1.2,
+  delay: 0.3,
+  ease: "power3.out"
+});
+
+// Pricing cards animatie
+gsap.from(".animate-fadein", {
+  scrollTrigger: {
+    trigger: ".pricing-cards",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1.2,
+  stagger: 0.3,
+  ease: "power3.out"
+});
+
+// Toggle functie
+const privateBtn = document.getElementById('privateBtn');
+const businessBtn = document.getElementById('businessBtn');
+const prices = document.querySelectorAll('.card');
+
+privateBtn.addEventListener('click', () => {
+  privateBtn.classList.add('active');
+  businessBtn.classList.remove('active');
+  prices.forEach(card => {
+    card.querySelector('.price').textContent = card.getAttribute('data-private');
+  });
+});
+
+businessBtn.addEventListener('click', () => {
+  businessBtn.classList.add('active');
+  privateBtn.classList.remove('active');
+  prices.forEach(card => {
+    card.querySelector('.price').textContent = card.getAttribute('data-business');
+  });
+});
+
+</script>
+      
+
+
+<section id="contact" class="contact-section">
+  <div class="contact-header">
+    <h2>Neem contact op</h2>
+    <p>We helpen je graag verder. Vul het formulier in en we nemen snel contact met je op!</p>
+    <div class="gold-line center"></div>
+  </div>
+
+  <form class="contact-form" action="mailto:jouremail@voorbeeld.nl" method="POST" enctype="text/plain">
+    <div class="form-group">
+      <input type="text" name="naam" placeholder="Je naam" required>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Je e-mailadres" required>
+    </div>
+    <div class="form-group">
+      <input type="tel" name="telefoon" placeholder="Je telefoonnummer (optioneel)">
+    </div>
+    <div class="form-group">
+      <textarea name="bericht" placeholder="Je bericht..." rows="5" required></textarea>
+    </div>
+    <button type="submit" class="contact-btn">Verzenden</button>
+  </form>
+</section>
+
+
+<script>
+  // Contact formulier animatie
+gsap.from(".contact-header h2", {
+  scrollTrigger: {
+    trigger: ".contact-header",
+    start: "top 85%",
+    toggleActions: "play none none none",
+  },
+  opacity: 0,
+  y: -50,
+  duration: 1.2,
+  ease: "power3.out"
+});
+
+gsap.from(".contact-header p", {
+  scrollTrigger: {
+    trigger: ".contact-header",
+    start: "top 85%",
+    toggleActions: "play none none none",
+  },
+  opacity: 0,
+  y: -30,
+  duration: 1.2,
+  delay: 0.3,
+  ease: "power3.out"
+});
+
+gsap.from(".contact-form", {
+  scrollTrigger: {
+    trigger: ".contact-form",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1.4,
+  ease: "power3.out"
+});
+
+</script>
+
+
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="ChatGPT Image 24 apr 2025, 14_41_52.png" alt="HM Booth Events Logo">
+    </div>
+
+    <div class="footer-links">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#about-us">Over ons</a></li>
+        <li><a href="#video-booth">360° Booth</a></li>
+        <li><a href="#pricing">Prijzen</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Volg ons</h4>
+      <div class="social-icons">
+        <a href="#" target="_blank" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.96.24 2.415.413.58.22 1.003.484 1.443.924.44.44.704.863.924 1.443.173.455.359 1.245.413 2.415.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.96-.413 2.415a3.905 3.905 0 01-.924 1.443 3.905 3.905 0 01-1.443.924c-.455.173-1.245.359-2.415.413-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.96-.24-2.415-.413a3.905 3.905 0 01-1.443-.924 3.905 3.905 0 01-.924-1.443c-.173-.455-.359-1.245-.413-2.415C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.96.413-2.415a3.905 3.905 0 01.924-1.443 3.905 3.905 0 011.443-.924c.455-.173 1.245-.359 2.415-.413C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.77.13 4.603.333 3.653.762 2.653 1.217 1.77 2.1 1.315 3.1c-.429.95-.632 2.117-.69 3.399C.012 8.332 0 8.741 0 12c0 3.259.012 3.668.072 4.948.058 1.282.261 2.449.69 3.399.455 1 .918 1.883 1.883 2.838.955.965 1.838 1.428 2.838 1.883.95.429 2.117.632 3.399.69C8.332 23.988 8.741 24 12 24c3.259 0 3.668-.012 4.948-.072 1.282-.058 2.449-.261 3.399-.69 1-.455 1.883-.918 2.838-1.883.965-.955 1.428-1.838 1.883-2.838.429-.95.632-2.117.69-3.399.058-1.28.07-1.689.07-4.948s-.012-3.668-.072-4.948c-.058-1.282-.261-2.449-.69-3.399-.455-1-1.428-1.883-2.383-2.838C19.49.918 18.607.455 17.607 0c-.95-.429-2.117-.632-3.399-.69C15.668.012 15.259 0 12 0z"/>
+            <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zM18.406 4.594a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+          </svg>
+        </a>
+        
+        <a href="#" target="_blank" aria-label="WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163A11.93 11.93 0 0111.934 0C18.627 0 24 5.373 24 12.066c0 6.627-5.373 12-12.066 12-2.002 0-3.944-.486-5.688-1.414L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.275 1.591 5.448 0 9.886-4.438 9.886-9.888 0-5.448-4.438-9.886-9.886-9.886-5.448 0-9.888 4.438-9.888 9.886 0 2.225.742 4.296 2.011 5.992L3.7 20.3l2.954-.107zm11.387-5.464c-.297-.149-1.758-.867-2.031-.967-.273-.099-.472-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414-.074-.124-.272-.198-.571-.347z"/>
+          </svg>
+        </a>
+        
+        <a href="#" target="_blank" aria-label="Snapchat">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12 6.628 0 12-5.372 12-12 0-6.627-5.372-12-12-12zm4.539 17.865c-.299.125-.665.231-.974.315-.15.04-.315.08-.464.124-.373.118-.81.21-1.216.27-.222.035-.439.063-.666.084-.475.045-.966.068-1.445.059a23.448 23.448 0 01-1.713-.093c-.211-.022-.437-.056-.648-.085-.431-.064-.862-.165-1.282-.291a7.964 7.964 0 01-.488-.151c-.302-.098-.604-.223-.889-.355-.368-.168-.722-.369-1.063-.599-.275-.185-.541-.393-.786-.624-.26-.245-.505-.511-.727-.792-.256-.317-.495-.656-.695-1.009a8.626 8.626 0 01-.512-1.035 5.81 5.81 0 01-.271-.907c-.01-.035-.016-.07-.02-.104-.029-.238.016-.495.193-.686.178-.19.422-.296.684-.296.089 0 .18.01.27.031.037.008.073.017.107.028.221.07.449.144.679.203.429.112.866.19 1.302.22.133.009.268.013.402.013.232 0 .463-.011.693-.035.48-.05.95-.139 1.407-.263.129-.036.262-.069.39-.106.451-.13.903-.271 1.358-.408.479-.144.97-.271 1.46-.377.181-.037.364-.07.546-.1.226-.04.452-.072.679-.09.627-.053 1.253-.04 1.878.025.51.053 1.019.14 1.518.267.363.09.722.198 1.076.328.179.067.356.141.532.22.166.074.325.155.48.241.159.089.314.184.463.288.273.188.533.402.779.632.198.187.382.387.552.6.206.263.395.54.563.834.118.202.225.41.316.623.064.149.122.302.174.455.106.317.188.641.239.972.032.208.054.418.065.627a.67.67 0 01-.646.683c-.113 0-.228-.016-.34-.048-.089-.025-.178-.054-.266-.085-.211-.073-.426-.16-.645-.242-.212-.079-.425-.15-.638-.209-.137-.037-.275-.07-.413-.095-.144-.027-.29-.044-.435-.05-.15-.005-.301.003-.45.026-.142.022-.284.058-.426.105-.131.044-.261.094-.39.148z"/>
+          </svg>
+        </a>
+        
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><strong>Telefoon:</strong> 06-81485840</p>
+      <p><strong>Email:</strong> info@hmboothevents.nl</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 HM Booth Events | Powered by 
+      <a href="https://my-webber.com" target="_blank" class="powered-by">
+        <img src="MYWEBBER WIT.png" alt="Logo Maker" class="powered-logo">
+      </a>
+    </p>
+  </div>
+  
+</footer>
+
+
+
+<a href="https://wa.me/31681485840" class="whatsapp-float" target="_blank" aria-label="Chat op WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#25D366" viewBox="0 0 24 24">
+    <path d="M.057 24l1.687-6.163A11.93 11.93 0 0111.934 0C18.627 0 24 5.373 24 12.066c0 6.627-5.373 12-12.066 12-2.002 0-3.944-.486-5.688-1.414L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.275 1.591 5.448 0 9.886-4.438 9.886-9.888 0-5.448-4.438-9.886-9.886-9.886-5.448 0-9.888 4.438-9.888 9.886 0 2.225.742 4.296 2.011 5.992L3.7 20.3l2.954-.107zm11.387-5.464c-.297-.149-1.758-.867-2.031-.967-.273-.099-.472-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414-.074-.124-.272-.198-.571-.347z"/>
+  </svg>
+</a>
+<div class="whatsapp-popup" id="whatsappPopup">
+  Kom direct met ons in contact!
+</div>
+
+<script>
+  // WhatsApp popup automatisch tonen en verwijderen
+window.addEventListener('DOMContentLoaded', () => {
+  const popup = document.getElementById('whatsappPopup');
+  
+  // Na 1 seconde fade-in
+  setTimeout(() => {
+    popup.style.opacity = '1';
+    popup.style.transform = 'translateY(0)';
+  }, 1000);
+  
+  // Na 5 seconden fade-out en verwijderen
+  setTimeout(() => {
+    popup.style.opacity = '0';
+    popup.style.transform = 'translateY(20px)';
+  }, 6000);
+});
+
+</script>
+
+
+      
+</body>
+</html>
