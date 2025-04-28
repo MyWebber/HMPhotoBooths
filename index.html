@@ -249,7 +249,7 @@ businessBtn.addEventListener('click', () => {
     <div class="gold-line center"></div>
   </div>
 
-  <form class="contact-form" action="https://formspree.io/f/xyzwzrzp" method="POST" enctype="text/plain">
+  <form class="contact-form" action="https://formspree.io/f/xyzwzrzp" method="POST">
     <div class="form-group">
       <input type="text" name="naam" placeholder="Je naam" required>
     </div>
@@ -264,7 +264,42 @@ businessBtn.addEventListener('click', () => {
     </div>
     <button type="submit" class="contact-btn">Verzenden</button>
   </form>
+  <div id="form-success" style="display:none; text-align:center; margin-top:20px; font-size:1.2rem; color:#25D366;">
+    ✅ Bedankt voor je bericht! We nemen snel contact met je op.
+  </div>
+  
 </section>
+<script>
+  const contactForm = document.querySelector('.contact-form');
+  const successMessage = document.getElementById('form-success');
+
+  contactForm.addEventListener('submit', async function(event) {
+    event.preventDefault(); // Voorkomt standaard reload
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: contactForm.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        contactForm.reset(); // Formulier leegmaken
+        contactForm.style.display = 'none'; // Formulier verbergen
+        successMessage.style.display = 'block'; // Bedankje tonen
+      } else {
+        alert('Er ging iets mis. Probeer het later opnieuw.');
+      }
+    } catch (error) {
+      alert('Netwerkprobleem. Controleer je internetverbinding.');
+    }
+  });
+</script>
+
 
 
 <script>
