@@ -1,3 +1,37 @@
+/* Algemene reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Behoud een stabiele scroll en voorkom horizontale verschuiving */
+html, body {
+  overflow-x: hidden; /* voorkom horizontaal scrollen */
+  scroll-behavior: smooth; /* smooth scroll zonder schokken */
+  max-width: 100vw; /* voorkom overflow */
+  position: relative;
+}
+
+/* Voorkom animatieverspringingen */
+body {
+  transform: none !important;
+  will-change: auto;
+}
+
+/* Zorg dat secties geen ongewenste margins/paddings hebben buiten viewport */
+section {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Optional: Als je GSAP gebruikt en iets animeren wilt */
+.animate-fadein,
+.animate-slideup {
+  backface-visibility: hidden; /* voorkomt flikkeren */
+  transform-style: preserve-3d;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -132,7 +166,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: auto;
   }
   
   .item {
@@ -198,6 +232,37 @@
       margin: 1rem auto 2rem;
     }
   }
+
+  @media (max-width: 768px) {
+    .video-booth-section {
+      padding: 3rem 1.5rem; /* minder ruimte boven/onder */
+      min-height: auto;     /* niet forceren naar 100vh op mobiel */
+    }
+  
+    .item {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .gold-line {
+      margin: 1rem auto 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .video-booth-section {
+      padding: 2rem 1rem;
+    }
+  
+    .item-info h3 {
+      font-size: 2rem;
+    }
+  
+    .item-info p {
+      font-size: 1rem;
+    }
+  }
+  
   
 
 
@@ -549,4 +614,5 @@
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
   
+
   
